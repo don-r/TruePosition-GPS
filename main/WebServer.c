@@ -90,7 +90,7 @@ static void _web_server_task(void *p)
 
     ESP_LOGI(TAG, "server create socket ......");
     socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (socket > 0) {
+    if (socket >= 0) {
     	ESP_LOGI(TAG, "OK");
     	ESP_LOGI(TAG, "server socket bind ......");
     	memset(&sock_addr, 0, sizeof(sock_addr));
@@ -147,7 +147,7 @@ GIVE_WEBPAGE;
     		close(new_socket);
     	}	
     }
-    if (socket > 0) close(socket);
+    if (socket >= 0) close(socket);
 ESP_LOGI(TAG, "task closed\n");
 
     vTaskDelete(NULL);
