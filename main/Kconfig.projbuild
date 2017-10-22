@@ -1,0 +1,33 @@
+menu "GPSDO Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default "myssid"
+    help
+        SSID (network name) for the GPSDO to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default "mypassword"
+    help
+        WiFi password (WPA or WPA2) for the GPSDO to use.
+
+config GPS_LATITUDE
+    string "Latitude"
+    default 0
+    help
+        Latitude of the GPSDO.
+		
+config GPS_LONGTITUDE
+    string "Longtitude"
+    default 0
+    help
+        Longtitude of the GPSDO.
+		
+config GPS_ELEVATION
+    string "Elevation"
+    default 0
+    help
+        Elevation (in meters) of the GPSDO.
+		
+endmenu
